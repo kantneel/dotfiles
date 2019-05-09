@@ -18,14 +18,9 @@ set hlsearch
 set expandtab
 filetype plugin indent on
 
-" Colors
-if (has("termguicolors"))
-  set termguicolors                " enable 24 bit colors
-endif
-if !has('nvim')                   " needed to make 24 bit color work with  vim
-  set t_8b=[48;2;%lu;%lu;%lum
-  set t_8f=[38;2;%lu;%lu;%lum
-endif
+" set Vim-specific sequences for RGB colors
+"let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"#let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 colorscheme onedark
 
